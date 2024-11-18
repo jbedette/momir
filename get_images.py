@@ -4,10 +4,9 @@ from io import BytesIO
 import requests
 import time
 
-with open('./data/creatures.json', 'r', encoding='utf-8') as file:
-    creatures = json.load(file)
+# with open('./data/creatures.json', 'r', encoding='utf-8') as file:
+#     creatures = json.load(file)
 
-creature_images = []
 
 
 
@@ -18,12 +17,26 @@ def download_cropped_image(image_uri, file_name, delay=0.10):
     
     if response.status_code == 200:
         img = Image.open(BytesIO(response.content))
+        img = convert_to_black_and_white(img)
+        img.show()
         # Save the image with the specified file name
         img.save(f"./images/{file_name}.jpg")
         # print(f"Image saved as {file_name}.jpg")
+        return img
     else:
         print(f"Failed to download image from {image_uri}")
 
 
-for c in creatures:
-    download_cropped_image(c['image_uris']['art_crop'],c['name'])
+
+
+def convert_to_black_and_white(img):
+    
+    # Convert the image to grayscale (black and white)
+    bw_img = img.convert("L")
+    
+    # Save the black and white image
+    # bw_img.save(output_path)
+    return bw_img
+
+if __name__ == "__main__":
+    download_cropped_image()
