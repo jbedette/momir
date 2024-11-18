@@ -30,7 +30,7 @@ def create_card_image( card ):
     name = card['name']
     file_name = "./images/" + name + ".jpg"
     img = card['img']
-    text = card['oracle_text']
+    text = card['oracle_text'].split('\n')
 
     # downscale
     target_height = canvas_height // 3
