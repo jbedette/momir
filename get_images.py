@@ -18,9 +18,9 @@ def download_cropped_image(image_uri, file_name, delay=0.10):
     if response.status_code == 200:
         img = Image.open(BytesIO(response.content))
         img = convert_to_black_and_white(img)
-        img.show()
+        # img.show()
         # Save the image with the specified file name
-        img.save(f"./images/{file_name}.jpg")
+        # img.save(f"./images/{file_name}.jpg")
         # print(f"Image saved as {file_name}.jpg")
         return img
     else:

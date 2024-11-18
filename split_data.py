@@ -4,6 +4,7 @@ def extract_creatures():
     keys = [
         'name',
         'cmc',
+        'mana_cost',
         'type_line',
         'oracle_text',
         'power',
@@ -46,6 +47,7 @@ def momir_creatures_by_cmc():
     keys = [
         'name',
         'cmc',
+        'mana_cost',
         'type_line',
         'oracle_text',
         'power',

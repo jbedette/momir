@@ -1,5 +1,6 @@
 import json
 import get_images
+import create_card_image
 import random
 
 
@@ -16,9 +17,11 @@ if __name__ == '__main__':
     
     # print(momir['0'])
 
-    test_targs = ['1','2','3','4']
+    # test_targs = ['1','2','3','4']
+    test_targs = ['2']
     for targ in test_targs:
         creature = momir_get_creature(targ,momir)
+        creature = create_card_image.create_card_image(creature)
 
 
 
