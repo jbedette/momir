@@ -65,10 +65,10 @@ def draw_oracle_text(draw, text, max_width, max_height, buffer, font_path, initi
     return wrap_text(draw, text, font, max_width), font
 
 
-def create_card_image(card):
+def create_card_image(card, output_dest):
     # Card variables
     name = card.get("name", "default")
-    file_name = f"./images/{name}.jpg"
+    file_name = f"{output_dest}{name}.jpg"
     img = card.get("img")
     text = card.get("oracle_text", "")
     mana_cost = card.get("mana_cost", "")
