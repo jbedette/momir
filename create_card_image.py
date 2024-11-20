@@ -136,4 +136,5 @@ def create_card_image(card, output_dest):
     # Save the final image
     canvas.save(file_name)
     print(f"Image saved at {file_name}")
-    return canvas
+    # return canvas,file_name
+    return file_name

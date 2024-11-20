@@ -21,6 +21,14 @@ def momir_get_creature(cmc, creatures):
 #             #             json.dump(creature, creature_json, indent=4)
 #             #     return creature
 
+def gui_momir(cmc):
+    with open('./data/momir.json', 'r', encoding='utf-8') as file:
+        momir = json.load(file)
+    
+    creature = momir_get_creature(str(cmc),momir)
+    file_name = create_card_image.create_card_image(creature, output_dest="./images/")
+    return file_name
+
 if __name__ == '__main__':
     with open('./data/momir.json', 'r', encoding='utf-8') as file:
         momir = json.load(file)
