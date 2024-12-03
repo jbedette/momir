@@ -40,7 +40,7 @@ if __name__ == '__main__':
     for targ in test_targs:
         creature = momir_get_creature(targ,momir)
         creature = create_card_image.create_card_image(creature, output_dest="./images/")
-        creature.show()
+        # creature.show()
 
     # creature = get_creature("Reaper King",momir,True)
     # creature = create_card_image.create_card_image(creature)
