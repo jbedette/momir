@@ -6,7 +6,7 @@ echo "
 [Desktop Entry]
 Type=Application
 Name=Momir
-Exec=python3 ~/momir/gui.py
+Exec=python3 ~/momir/pyqt_gui.py
 Icon=/usr/share/icons/hicolor/48x48/apps/python3.png
 Terminal=true
 
@@ -19,6 +19,3 @@ Terminal=true
 # python3 -m pip install kivy[base] kivy[pygame] kivy[angle_sdl2]
 # python3 -c "import kivy; print(kivy.__version__)"
 
-python3 -m venv kivy-env
-source kivy-env/bin/activate
-pip install kivy[base] kivy[pygame] kivy[angle_sdl2]
