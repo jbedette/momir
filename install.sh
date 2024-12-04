@@ -13,4 +13,7 @@ Terminal=false
 
 " >> ~/Desktop/momir.desktop
 
+sudo apt update && sudo apt upgrade -y
+pip install pyqt5
+pip install --upgrade pillow
 

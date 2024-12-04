@@ -43,9 +43,16 @@ class IntegerImageApp(QWidget):
         # Right layout for the image
         right_layout = QVBoxLayout()
         self.image_label = QLabel()
-        self.image_label.setPixmap(QPixmap("sample.jpg"))  # Initial sample image
-        self.image_label.setScaledContents(True)
+        pixmap = QPixmap("sample.jpg")  # Initial sample image
+        self.image_label.setPixmap(pixmap.scaled(self.width() // 2, self.height(), Qt.KeepAspectRatio, Qt.SmoothTransformation))
         right_layout.addWidget(self.image_label)
+
+        # # Right layout for the image
+        # right_layout = QVBoxLayout()
+        # self.image_label = QLabel()
+        # self.image_label.setPixmap(QPixmap("sample.jpg"))  # Initial sample image
+        # self.image_label.setScaledContents(True)
+        # right_layout.addWidget(self.image_label)
 
         # Add both layouts to the main layout
         main_layout.addLayout(left_layout)
