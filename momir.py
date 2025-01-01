@@ -2,7 +2,7 @@ import json
 import get_images
 import create_card_image
 import random
-import print
+import cups_print
 
 
 def momir_get_creature(cmc, creatures):
@@ -28,7 +28,8 @@ def gui_momir(cmc):
     
     creature = momir_get_creature(str(cmc),momir)
     file_name = create_card_image.create_card_image(creature, output_dest="./images/")
-    # print.print_file(file_name)
+    # print(f"{file_name}")
+    cups_print.print_img(file_name)
     return file_name
 
 if __name__ == '__main__':
