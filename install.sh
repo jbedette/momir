@@ -14,6 +14,7 @@ Terminal=false
 " >> ~/Desktop/momir.desktop
 
 sudo apt update && sudo apt upgrade -y
-pip install pyqt5
-pip install --upgrade pillow
-
+sudo apt install -y python3-pip
+sudo pip install -y pybluez pyqt5
+sudo apt install -y python3-dbus python3-usb
+# sudo pip install --upgrade pillow

@@ -1,6 +1,5 @@
 # import cups
 from PIL import Image
-
 def print_img(image_path):
     print(f"{image_path}")
     # try:
